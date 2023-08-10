@@ -7,7 +7,7 @@ function Header({ setBgColor, bgColor }) {
         type="button"
         className="btn btn-primary toggle-btn"
       >
-        Dark Mode Toggle
+        {bgColor ? "Light" : "Dark"} Mode Toggle
       </button>
     </div>
   );
