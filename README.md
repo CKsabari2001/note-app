@@ -24,20 +24,21 @@ Every note you create is automatically timestamped with the date of creation. Th
 Worried about losing your valuable notes? Our app uses local storage to persistently store your notes on your device. Please be aware that if you clear your browser data or switch to a different browser, the stored notes may not be accessible.
 ## Demo
 
-Check out the live demo of the Note Verse - <a href="https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/" target="_blank">https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/</a>
+Check out the live demo of the Note Verse - https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/
+
 
 ## Run Locally
 
 ### 1. Clone the project
 
 ```bash
-  git clone https://github.com/your-username/react-note-app.git
+  git clone https://github.com/CKsabari2001/note-verse
 ```
 
 ### 2. Go to the project directory
 
 ```bash
-  cd my-project
+  cd note-verse
 ```
 
 ### 3. Install dependencies
