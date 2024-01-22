@@ -26,9 +26,6 @@ Worried about losing your valuable notes? Our app uses local storage to persiste
 
 Check out the live demo of the Note Verse - <a href="https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/" target="_blank">https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/</a>
 
-<a href="https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/" target="_blank">https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/</a>
-
-
 ## Run Locally
 
 ### 1. Clone the project
