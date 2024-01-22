@@ -22,10 +22,10 @@ Every note you create is automatically timestamped with the date of creation. Th
 
 ### 6. Persistent Storage
 Worried about losing your valuable notes? Our app uses local storage to persistently store your notes on your device. Please be aware that if you clear your browser data or switch to a different browser, the stored notes may not be accessible.
-
 ## Demo
 
-Check out the live demo of the Note Verse [https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/](#).
+Check out the live demo of the Note Verse - https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/
+
 
 ## How to Deploy
 
