@@ -20,7 +20,7 @@ Persistent Storage: Worried about losing your valuable notes? With our app, your
 
 ## Demo
 
-https://cksabari2001.github.io/react-note-app/
+https://startling-kitten-492019.netlify.app/
 
 
 ## Deployment
