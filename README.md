@@ -27,37 +27,34 @@ Worried about losing your valuable notes? Our app uses local storage to persiste
 Check out the live demo of the Note Verse - https://65ae28d6e8f5d6072c59513f--startling-kitten-492019.netlify.app/
 
 
-## How to Deploy
+## Run Locally
 
-To deploy the project on your local machine, follow these steps:
-
-### 1. Clone the repository to your local machine.
+### 1. Clone the project
 
 ```bash
   git clone https://github.com/your-username/react-note-app.git
 ```
 
-### 2. Navigate to the project directory
+### 2. Go to the project directory
 
 ```bash
-  cd react-note-app
+  cd my-project
 ```
 
-### 3. Install dependencies.
+### 3. Install dependencies
 
 ```bash
   npm install
 ```
 
-### 4. Run the app.
+### 4. Start the server
 
 ```bash
-  npm start
+  npm run start
 ```
 
-Now, you should be able to access the Note Verse on your local environment. Happy note-taking!
 
-## Built With
+## Tech Stack
 
-This project is built using React, a JavaScript library for building user interfaces.
+**Client:** React, BootStrap, HTML, CSS, JS
 
