@@ -1,3 +1,10 @@
+:root {
+  --body-height: "";
+}
+.app-container {
+  min-height: var(--body-height);
+}
+
 /* Common Class */
 h1,
 .btn,
@@ -19,42 +26,81 @@ p {
   min-height: 100vh;
 }
 .bg-color-light {
-  background-color: #fffbfe;
+  background-color: #ffffff;
 }
 .bg-color-dark {
-  background-color: #121212;
+  background-color: #222222;
+}
+
+h1,
+.form-check-label {
+  color: #222222;
+}
+h1 {
+  font-weight: bolder;
+}
+.form-check-label {
+  font-weight: 500;
+}
+
+.bg-color-dark h1,
+.bg-color-dark .form-check-label {
+  color: #ffffff;
 }
 
 /* Note List */
 .c-card {
   border: none;
-  background-color: #ddd;
-  min-height: 300px;
-  max-width: 22rem;
+  background-color: #e6e6e6;
   width: 100%;
   white-space: pre-wrap;
   border-radius: 15px;
 }
+
+.card-body {
+  overflow: hidden;
+}
+
 .c-card .card-footer {
   border-top: 0;
   border-radius: 15px;
-  background-color: #e9e9e9;
+  background-color: #ccc;
 }
 .c-card .card-footer svg {
-  color: black;
   font-size: 22px;
   transition: all 0.3s ease-in-out;
 }
 .c-card .card-footer svg:hover {
-  color: red;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  opacity: 0.7;
+}
+
+.n-card {
+  height: 135px;
+  min-height: 135px;
+}
+.show-full {
+  min-height: 300px;
+  height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .n-card {
+    min-height: 300px;
+    height: auto;
+  }
+}
+
+.im-card {
+  min-height: 300px;
+  height: auto;
 }
 
 /* New Note  */
 .c-card .form-control {
   height: 100%;
-  background-color: #9384d1;
+  background-color: #7d65d1;
   border: 0;
   resize: none;
 }
@@ -65,12 +111,12 @@ p {
   border: none;
 }
 .im-card {
-  background-color: #9384d1;
+  background-color: #7d65d1;
 }
 .im-card .card-footer {
-  background-color: #9384d1;
+  background-color: #4e35a3;
 }
-.save-btn {
+/* .save-btn {
   border-radius: 20px;
   background-color: #fffbfe;
   border: none;
@@ -85,12 +131,12 @@ p {
   border: none;
   color: black;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 /* Search Bar */
 .search-form {
   position: relative;
-  background-color: #e9e9e9;
+  background-color: #e6e6e6;
   border-radius: 12px;
 }
 .search-form svg {
@@ -98,38 +144,42 @@ p {
 }
 .search-form input {
   border: 0;
-  background-color: #e9e9e9;
+  background-color: #e6e6e6;
   width: 100%;
   font-weight: 500;
   border-radius: 12px;
 }
 .search-form input::placeholder {
-  font-weight: 400;
+  font-weight: 500;
 }
 .search-form input:focus-visible,
 .search-form input:focus {
-  background-color: #e9e9e9;
+  background-color: #e6e6e6;
   box-shadow: none;
   border: 0;
 }
 
 /* Header  */
-.toggle-btn {
-  background-color: #e9e9e9;
+/* Light Mode */
+.c-btn {
+  background-color: #7d65d1;
+  padding: 5px 20px;
   border: 0;
-  color: black;
-  border-radius: 20px;
+  color: #ffffff;
+  border-radius: 10px;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
-.toggle-btn:hover,
-.toggle-btn:active,
-.toggle-btn:focus,
-.toggle-btn:focus-visible {
-  background-color: #d5d5d5 !important;
+.c-btn:hover,
+.c-btn:active,
+.c-btn:focus,
+.c-btn:focus-visible,
+.c-btn:active:focus-visible {
+  background-color: #4e35a3 !important;
   border: 0;
-  box-shadow: none;
-  color: rgb(0, 0, 0);
+  box-shadow: none !important;
+  color: #ffffff;
+  outline: 0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -137,58 +187,121 @@ p {
 .bg-color-dark .search-form,
 .bg-color-dark .search-form .form-control::placeholder,
 .bg-color-dark .search-form input,
-.bg-color-dark .toggle-btn:active,
-.bg-color-dark .toggle-btn:focus,
-.bg-color-dark .toggle-btn:focus-visible {
-  background-color: #212121;
-  color: #aaaaaa;
+.bg-color-dark .c-btn:active,
+.bg-color-dark .c-btn:focus,
+.bg-color-dark .c-btn:focus-visible {
+  background-color: #2f2f2f;
+  color: #ffffff;
 }
 .bg-color-dark .search-form svg,
 .bg-color-dark .search-form input {
+  color: #ffffff;
+}
+.bg-color-dark .c-btn {
+  background-color: #4e35a3 !important;
   color: white;
 }
-.bg-color-dark .toggle-btn,
-.bg-color-dark .toggle-btn:active,
-.bg-color-dark .toggle-btn:focus,
-.bg-color-dark .toggle-btn:focus-visible {
-  background-color: #212121 !important;
+.bg-color-dark .c-btn:hover,
+.bg-color-dark .c-btn:active,
+.bg-color-dark .c-btn:focus,
+.bg-color-dark .c-btn:focus-visible,
+.bg-color-dark .c-btn:active:focus-visible {
+  background-color: #7d65d1 !important;
   color: white;
-}
-.bg-color-dark .toggle-btn:hover {
-  background-color: #282828 !important;
-  color: white;
+  outline: 0;
+  box-shadow: none;
 }
 .bg-color-dark h1 {
   color: white;
 }
 .bg-color-dark .c-card {
-  background-color: #212121;
+  background-color: #2f2f2f;
   color: white;
 }
 .bg-color-dark .c-card .card-footer {
-  background-color: #282828;
+  background-color: #555555;
 }
 .bg-color-dark .c-card svg {
   color: white;
 }
 .bg-color-dark .c-card .form-control,
-.bg-color-dark .im-card,
-.bg-color-dark .im-card .card-footer {
-  background-color: #3b2f4d;
+.bg-color-dark .im-card {
+  background-color: #4e35a3;
   color: white;
 }
-.form-control::placeholder {
-  color: #333 !important;
-  font-weight: 300;
+.bg-color-dark .im-card .card-footer {
+  background-color: #7d65d1;
+}
+.search-form .form-control::placeholder {
+  color: #222222 !important;
+  font-weight: 500;
 }
 .bg-color-dark .form-control::placeholder {
-  color: #bfbfbf !important;
-  font-weight: 300;
+  color: #ffffff !important;
+  font-weight: 500;
 }
-.bg-color-dark .save-btn {
+/* .bg-color-dark .save-btn {
   background-color: #212121;
   color: white;
 }
 .bg-color-dark .save-btn:hover {
   background-color: #282828;
+} */
+
+.form-switch .form-check-input {
+  border-color: #7d65d1;
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgb(125, 101, 209)%27/%3e%3c/svg%3e");
+}
+.form-check-input:checked {
+  background-color: #4e35a3;
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgb(255, 255, 255)%27/%3e%3c/svg%3e");
+}
+
+/* .form-switch .form-check-input:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#E6E6E6" ><path d="M256 23.05C127.5 23.05 23.05 127.5 23.05 256S127.5 488.9 256 488.9 488.9 384.5 488.9 256 384.5 23.05 256 23.05z"/></svg>');
+} */
+
+.form-check-input:active,
+.form-check-input:focus,
+.form-check-input:focus-visible {
+  border-color: #7d65d1;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(154, 135, 219, 0.25);
+}
+
+.im-card .card-footer p {
+  color: #ffffff;
+}
+#get-Note,
+#get-Note::placeholder {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.form-control::placeholder {
+  opacity: 0.8;
+}
+.form-control {
+  opacity: 1;
+}
+
+.n-card svg,
+.n-card p {
+  color: #222222;
+}
+
+.bg-color-dark .n-card svg,
+.bg-color-dark .n-card p {
+  color: #ffffff;
+}
+
+.im-card svg {
+  color: #ffffff;
+}
+
+.search-form svg {
+  color: #222222;
+}
+.bg-color-dark .search-form svg {
+  color: #ffffff;
 }

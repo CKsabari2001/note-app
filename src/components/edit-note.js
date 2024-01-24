@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Button } from "react-bootstrap";
+
+import { Card, Stack } from "react-bootstrap";
+
 import { MdCancel } from "react-icons/md";
+import { FaSave } from "react-icons/fa";
 
 function EditNote({
   sendEditNoteData,
@@ -53,11 +56,11 @@ function EditNote({
         <p className="mb-0">
           {CharacterLimit - noteData.data.length} Remaining
         </p>
-        <div className="d-flex align-items-center">
-          <MdCancel onClick={() => CancelEdit()} />
-          <Button className="save-btn ms-2" onClick={sendNote}>
-            Save
-          </Button>
+        <div className="d-flex align-items-center justify-content-between">
+          <Stack direction="horizontal" gap={2}>
+            <MdCancel onClick={() => CancelEdit()} />
+            <FaSave onClick={sendNote} />
+          </Stack>
         </div>
       </Card.Footer>
     </Card>

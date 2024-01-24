@@ -1,6 +1,8 @@
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Button } from "react-bootstrap";
+
+import { Card } from "react-bootstrap";
+
+import { FaSave } from "react-icons/fa";
 
 function NewNote({ getNote }) {
   const [noteData, setNoteData] = useState("");
@@ -29,15 +31,13 @@ function NewNote({ getNote }) {
             id="get-Note"
             onChange={handleChange}
             value={noteData}
-            placeholder="Type here to Create New Note"
+            placeholder="Type here to create new note"
           ></textarea>
         </Card.Text>
       </Card.Body>
       <Card.Footer className="d-flex justify-content-between align-items-center">
         <p className="mb-0">{CharacterLimit - noteData.length} Remaining</p>
-        <Button className="save-btn" onClick={sendNote}>
-          Save
-        </Button>
+        <FaSave onClick={sendNote} />
       </Card.Footer>
     </Card>
   );

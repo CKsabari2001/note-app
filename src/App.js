@@ -8,6 +8,60 @@ import Header from "./components/header";
 
 function App() {
   const [noteListContent, setNoteListContent] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  const [bgColor, setBgColor] = useState(false);
+
+  // set Height to CSS
+
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--body-height",
+      `${screenHeight}px`
+    );
+  }, [screenHeight]);
+
+  const handleResize = () => {
+    setScreenHeight(window.innerHeight);
+  };
+
+  // Set the Width and Height
+  useEffect(() => {
+    // Set initial screen dimensions
+    setScreenHeight(window.innerHeight);
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array ensures this effect runs once on mount
+
+  // set Height to CSS
+
+  // Get Data from Local Storage
+  useEffect(() => {
+    const saveNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
+    const bgColor = JSON.parse(localStorage.getItem("react-note-bg-value"));
+    if (saveNotes) {
+      setNoteListContent(saveNotes);
+    }
+    if (bgColor) {
+      setBgColor(bgColor);
+    }
+  }, []);
+
+  // Set Data from Local Storage
+  useEffect(() => {
+    localStorage.setItem(
+      "react-notes-app-data",
+      JSON.stringify(noteListContent)
+    );
+    localStorage.setItem("react-note-bg-value", JSON.stringify(bgColor));
+  }, [noteListContent, bgColor]);
 
   const getNote = (data) => {
     const date = new Date();
@@ -25,29 +79,6 @@ function App() {
     setNoteListContent(newNote);
   };
 
-  const [searchValue, setSearchValue] = useState("");
-
-  const [bgColor, setBgColor] = useState(false);
-
-  useEffect(() => {
-    const saveNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
-    const bgColor = JSON.parse(localStorage.getItem("react-note-bg-value"));
-    if (saveNotes) {
-      setNoteListContent(saveNotes);
-    }
-    if (bgColor) {
-      setBgColor(bgColor);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem(
-      "react-notes-app-data",
-      JSON.stringify(noteListContent)
-    );
-    localStorage.setItem("react-note-bg-value", JSON.stringify(bgColor));
-  }, [noteListContent, bgColor]);
-
   const getEditNoteData = (data) => {
     const date = new Date();
     const newNote = {
@@ -63,11 +94,24 @@ function App() {
     setNoteListContent(newNoteList);
   };
 
+  const clearAllNotes = () => {
+    console.log("Test");
+    setNoteListContent([]);
+  };
+
   return (
-    <div className={`h100vh ${bgColor ? "bg-color-dark" : "bg-color-light"}`}>
+    <div
+      className={`app-container ${
+        bgColor ? "bg-color-dark" : "bg-color-light"
+      }`}
+    >
       <div className="container-fluid">
         <div className="container">
-          <Header setBgColor={setBgColor} bgColor={bgColor} />
+          <Header
+            setBgColor={setBgColor}
+            bgColor={bgColor}
+            clearAllNotes={clearAllNotes}
+          />
           <Search setSearchValue={setSearchValue} />
           <NoteList
             noteListContent={noteListContent.filter((note) => {
