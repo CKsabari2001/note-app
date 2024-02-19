@@ -30,7 +30,7 @@ Worried about losing your valuable notes? Our app uses local storage to persiste
 
 ## Demo
 
-Check out the live demo of the Note Verse - https://startling-kitten-492019.netlify.app/
+Check out the live demo of the Note Verse - https://cksabari2001-note-verse.netlify.app
 
 ## Run Locally
 
