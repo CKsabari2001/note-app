@@ -2,6 +2,10 @@
 
 Welcome to the Note Verse! This React-based application provides a simple and efficient way to manage your notes with features like note creation, editing, deletion, and a stylish dark mode theme.
 
+## Demo
+
+Check out the live demo of the Note Verse - https://cksabari2001-note-verse.netlify.app
+
 ## Key Features
 
 ### 1. Create Notes with Word Limitation
@@ -28,6 +32,10 @@ Every note you create is automatically timestamped with the date of creation. Th
 
 Worried about losing your valuable notes? Our app uses local storage to persistently store your notes on your device. Please be aware that if you clear your browser data or switch to a different browser, the stored notes may not be accessible.
 
+## Tech Stack
+
+**Client:** React, BootStrap, React-Bootstrap, HTML, CSS, JS
+
 
 ## Screenshots
 
@@ -35,9 +43,6 @@ Worried about losing your valuable notes? Our app uses local storage to persiste
 
 ![306054448-a2b36248-42ee-4301-998e-d814375b97c9](https://github.com/CKsabari2001/note-verse/assets/110533554/5ed38f55-423a-4533-bef2-d2d713631692)
 
-## Demo
-
-Check out the live demo of the Note Verse - https://cksabari2001-note-verse.netlify.app
 
 ## Run Locally
 
@@ -65,6 +70,4 @@ Check out the live demo of the Note Verse - https://cksabari2001-note-verse.netl
   npm run start
 ```
 
-## Tech Stack
 
-**Client:** React, BootStrap, React-Bootstrap, HTML, CSS, JS
